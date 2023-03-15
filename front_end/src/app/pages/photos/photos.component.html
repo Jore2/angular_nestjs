@@ -1,0 +1,8 @@
+<h3 *ngIf="limitPhotos" class="text-center">Top 10 Photos!</h3>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <ng-template ngFor [ngForOf]="photos" let-photo let-i="index">
+    <div class="col">
+      <app-photo [thumbnailUrl]="photo.thumbnailUrl"></app-photo>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,10 @@
+<div *ngIf="posts">
+  <h3 *ngIf="limitPhotos" class="text-center">Top 10 Posts!</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <ng-template ngFor [ngForOf]="posts" let-post let-i="index">
+      <div class="col">
+        <app-post [title]="post.title" [body]="post.body"></app-post>
+      </div>
+    </ng-template>
+  </div>
+</div>
